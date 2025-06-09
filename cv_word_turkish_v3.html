@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* Page setup for WeasyPrint */
+        @page {
+            size: A4;
+            margin-top: 0.8in;
+            margin-bottom: 0.3in;
+            margin-left: 0.8in;
+            margin-right: 0.6in; /* Extremely narrow right margin */
+        }
+        
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            font-size: 10.0pt; /* Slightly smaller font for better fit */
+            line-height: 1.15;
+            margin: 0;
+            padding: 0;
+            color: #000000;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #0066CC;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .name {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #0066CC;
+            margin-bottom: 5px;
+        }
+        .title {
+            font-size: 14pt;
+            color: #666666;
+            margin-bottom: 10px;
+        }
+        .contact {
+            font-size: 10pt;
+            color: #666666;
+        }
+        .section-title {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #0066CC;
+            border-bottom: 1px solid #0066CC;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding-bottom: 3px;
+        }
+        .subsection-title {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #333333;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        .job-title {
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 1px;
+        }
+        .company {
+            font-style: italic;
+            color: #666666;
+            margin-bottom: 0px;
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+        .date {
+            float: right;
+            color: #666666;
+            font-style: italic;
+        }
+        .achievement {
+            margin-left: 15px;
+            margin-bottom: 5px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .skill-category {
+            margin-bottom: 10px;
+        }
+        .skill-header {
+            font-weight: bold;
+            color: #0066CC;
+            margin-bottom: 3px;
+        }
+        .summary-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #0066CC;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .page-break {
+            page-break-before: always;
+        }
+        .job-section {
+            margin-bottom: 15px;
+        }
+        .job-title-line {
+            color: #0066CC;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        .company-indented {
+            margin-left: 20px;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+        .tutorial-link {
+            color: #0066CC;
+            text-decoration: underline;
+            font-weight: normal;
+        }
+        .tutorial-link:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin-top: 1px;
+            margin-bottom: 5px;
+            padding-left: 0px;
+            list-style-type: none;
+        }
+        li {
+            margin-bottom: 3px;
+            margin-left: 20px;
+            text-indent: -20px;
+        }
+        li:before {
+            content: "- ";
+        }
+        li ul {
+            margin-top: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="name">TOGAY TUNCA</div>
+        <div class="title">Casino Gözetim Müdürü | Güvenlik Danışmanı | Yapay Zeka Yazılım Geliştirici</div>
+        <div class="contact">
+            📧 togay.tunca@gmail.com | 📱 +90 543 898-18-48 | 📍 İstanbul, Türkiye<br>
+            🔗 <a href="https://www.linkedin.com/feed/" class="tutorial-link">LinkedIn</a> | 💻 <a href="https://github.com/evinai" class="tutorial-link">GitHub</a>
+        </div>
+    </div>
+
+    <div class="section-title">MESLEKİ ÖZET</div>
+    <div class="summary-box">
+        <strong>Türkiye, Romanya, Guatemala, Yemen, Filipinler</strong> genelinde casino operasyonları, kurumsal güvenlik ve otelcilik yönetimi alanlarında 24+ yıllık uluslararası deneyime sahip dinamik <strong>Casino Gözetim Müdürü</strong> ve <strong>Güvenlik Danışmanı</strong>. Şu anda <strong>Generatif Yapay Zeka ve yazılım geliştirme</strong> uzmanlığını kullanarak yenilikçi gözetim ve güvenlik çözümleri geliştirmekte.
+        <br><br>
+        <strong>Temel Uzmanlık Alanları:</strong> Casino gözetim sistemleri, güvenlik risk değerlendirmesi, çok sahali operasyon yönetimi, Yapay Zeka destekli analitik ve Python/FastAPI ile full-stack geliştirme. Karmaşık projeleri yönetme, sistemleri optimize etme ve çok kültürlü ortamlarda büyük ekipleri yönetme konularında deneyimli.
+        <br><br>
+        <strong>Benzersiz Değer Önerisi:</strong> Geleneksel güvenlik operasyonları ile son teknoloji Yapay Zeka teknolojisi arasında köprü kurarak gözetim etkinliğini ve operasyonel verimliliği artırma. Verimlilik optimizasyonu, karar verme süreçlerini iyileştirme ve inovasyonu teşvik etmek için Generatif Yapay Zeka ve veri odaklı çözümleri iş süreçlerine entegre etme konusunda tutkulu.
+    </div>
+
+    <div class="section-title">TEMEL YETKINLİKLER</div>
+    <div class="skills-grid">
+        <div>
+            <div class="subsection-title">Casino ve Gözetim Operasyonları</div>
+            <ul>
+                <li>CCTV gözetim sistemi tasarımı ve uygulaması</li>
+                <li>Oyun güvenlik protokolleri ve olay tespiti</li>
+                <li>Gerçek zamanlı izleme ve tehdit değerlendirmesi</li>
+                <li>Gözetim ekibi liderliği ve eğitimi</li>
+            </ul>
+            
+            <div class="subsection-title">Güvenlik Yönetimi ve Danışmanlık</div>
+            <ul>
+                <li>Kurumsal güvenlik stratejisi geliştirme</li>
+                <li>Fiziksel güvenlik sistemi entegrasyonu</li>
+                <li>Risk değerlendirmesi ve güvenlik açığı analizi</li>
+                <li>Acil durum müdahale koordinasyonu</li>
+                <li>Uluslararası proje güvenlik yönetimi</li>
+            </ul>
+        </div>
+        <div>
+            <div class="subsection-title">Yapay Zeka Geliştirme ve Teknoloji</div>
+            <ul>
+                <li>Yapay Zeka destekli uygulamalar için FastAPI ile Python geliştirme</li>
+                <li>Büyük Dil Modeli entegrasyonu (OpenAI, Anthropic, Hugging Face)</li>
+                <li>Yapay Zeka ajan çerçeveleri (LangChain, LangGraph, CrewAI)</li>
+                <li>Bulut platformları ve konteynerleştirme (AWS, GCP, Docker)</li>
+                <li>Veritabanı yönetimi ve veri işleme araçları</li>
+            </ul>
+            
+            <div class="subsection-title">Liderlik ve Operasyonlar</div>
+            <ul>
+                <li>Çok kültürlü ekip yönetimi (900+ personel)</li>
+                <li>Stratejik planlama ve süreç optimizasyonu</li>
+                <li>Eğitim programı geliştirme</li>
+                <li>Satıcı değerlendirmesi ve sözleşme müzakereleri</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section-title">MESLEKİ DENEYİM</div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Bağımsız Danışman - Generatif Yapay Zeka Geliştirme | Haziran 2023 - Devam Ediyor</div>
+        <div class="company-indented">Serbest Meslek</div>
+        <ul>
+            <li>Yapay Zeka destekli gözetim ve güvenlik analitik çözümleri geliştirme</li>
+            <li>Casino gözetim ve güvenlik operasyonları ve analitik platformları dahil 20+ özel API oluşturma (geliştirilmekte)</li>
+            <li>LLM'leri geleneksel iş süreçleriyle entegre ederek verimlilik ve optimizasyon sağlama</li>
+            <li><strong>Başlıca Projeler:</strong>
+                <ul>
+                    <li><code>casino_surveillance_operations_1024_v2</code>: (geliştirme aşamasında) Analitik API</li>
+                    <li><code>ai_fast_local_rag_knowledge_1224_E001</code>: Gelişmiş yerel RAG bilgi sistemi</li>
+                    <li><code>ai_graph_parallel_market_research_0525</code>: Paralel işleme pazar araştırması analitiği</li>
+                    <li><code>ai_graph_business_strategy_0525</code>: Yapay Zeka destekli iş stratejisi geliştirme platformu</li>
+                    <li><code>ai_graph_medical_rag_0525</code>: Tıbbi bilgi edinme ve analiz sistemi</li>
+                    <li><code>ai_profile_knowledge_creator_0125_E002</code>: Yapay Zeka tabanlı bilgi profili oluşturucu</li>
+                    <li><code>ai_fast_crew_planning_estimation_1224_G003</code>: Kaynak planlama ve tahmin sistemi</li>
+                </ul>
+            </li>
+            <br>
+            <li><strong>Yayınlanan Eğitim İçerikleri:</strong>
+                <ul>
+                    <li><a href="https://evinai.github.io/Tutorial-Python-0626/" class="tutorial-link">Her Yaş İçin Python Öğrenimi</a> - Kapsamlı Python programlama eğitimi</li>
+                    <li><a href="https://evinai.github.io/Tutorials_All_0626/" class="tutorial-link">Yapay Zeka Programlama Eğitimi-Teknik Hub-Temeller</a> - Yapay Zeka programlama kavramlarına giriş</li>
+                    <li><a href="https://evinai.github.io/RAG_SYSTEMS_Tutorial_0625/" class="tutorial-link">RAG Sistemleri Eğitimi</a> - İleri seviye RAG uygulama rehberi</li>
+                    <li><a href="https://evinai.github.io/JINJA_FASTAPI_Tutorial_0626/" class="tutorial-link">Jinja FastAPI Eğitimi</a> - FastAPI ve Jinja şablonları ile web geliştirme</li>
+                    <li><a href="https://evinai.github.io/ai_costomer_service_E009/" class="tutorial-link">Yapay Zeka Müşteri Hizmet Sistemi</a> - Yapay Zeka destekli müşteri destek uygulaması</li>
+                    <li><a href="https://evinai.github.io/ai_fast_graph_restaurant_0525/" class="tutorial-link">Yapay Zeka Graph Restoran Sistemi</a> - Yapay Zeka analitiği ile restoran yönetimi</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Gözetim Müdürü | Şubat - Haziran 2023</div>
+        <div class="company-indented">Nima Group / Club Royal Caribbean</div>
+        <ul>
+            <li>Oyun gözetim sistemlerini yükselterek olay tespit doğruluğunu iyileştirme</li>
+            <li>Gözetim personeline ileri izleme teknikleri konusunda işbaşı eğitimi</li>
+            <li>Güvenlik uyumunu artıran yeni gözetim protokolleri uygulama</li>
+            <li><strong>Stratejik kamera yerleştirme ve sistem optimizasyonu ile gözetim kör noktalarını %90 azaltma</strong></li>
+            <li>Gözetim sistemi performansını optimize etme</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Bağımsız Danışman - Yapay Zeka Eğitimi | Ocak 2018 - Şubat 2023</div>
+        <div class="company-indented">Serbest Meslek</div>
+        <ul>
+            <li>COVID-19 pandemisi sırasında Generatif Yapay Zeka konusunda kendini geliştirme ve ileri eğitime odaklanma</li>
+            <li><strong>Yapay Zeka ve makine öğrenmesi teknolojilerinde 40+ özel kurs tamamlama</strong></li>
+            <li>Yapay Zeka tabanlı casino gözetim sistemleri ve KPI takibi dahil kişisel projeler üzerinde çalışma</li>
+            <li>Yapay Zeka modellerinde uzmanlık kazanma ve çeşitli endüstrilerdeki pratik uygulamaları</li>
+        </ul>
+    </div>
+    
+    <div class="job-section">
+        <div class="job-title-line">- İdari Müdür / Saha Güvenlik Müdürü | Haziran 2017 - Ocak 2018</div>
+        <div class="company-indented">ABD Büyükelçiliği İnşaat Projesi, Filipinler<br><em>Zafer İnşaat Co. / Framaco Philippines Inc.</em></div>
+        <ul>
+            <li>Lansman öncesi mobilizasyon aşaması idari koordinasyon, personel değerlendirmesi, personel seçimi</li>
+            <li><strong>900+ vasıflı işçiyi başarıyla işe alıp değerlendirerek zamanında %100 personel temini sağlama</strong></li>
+            <li>Satıcı seçimi, değerlendirmesi ve sözleşme müzakerelerini koordine etme</li>
+            <li>Uluslararası inşaat projesinin tüm idari ve kısmi güvenlik yönlerini denetleme</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Güvenlik Danışmanı - Analist | Kasım 2015 - Mayıs 2017</div>
+        <div class="company-indented">ISCD Güvenlik Danışmanlığı</div>
+        <ul>
+            <li>Kurumsal müşteriler için kapsamlı güvenlik risk değerlendirmeleri yürütme</li>
+            <li>Tespit doğruluğunu artıran gelişmiş risk değerlendirme modelleri geliştirme</li>
+            <li>Detaylı danışmanlık raporları ve stratejik öneriler hazırlama</li>
+            <li>Fiziksel ve kurumsal tesis güvenlik değerlendirmelerinde uzmanlaşma</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Bağımsız Danışman - Pazar Analizi | Ekim - Aralık 2016</div>
+        <div class="company-indented">Zafer İnşaat Co.</div>
+        <ul>
+            <li>Filipinler proje öncesi aşama için derinlemesine pazar analizi yürütme</li>
+            <li>Kapsamlı pazar verilerini toplama ve değerlendirme</li>
+            <li>Proje planlama ve uygulama için stratejik içgörüler sağlama</li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Saha Güvenlik Müdürü | Kasım 2012 - Şubat 2015</div>
+        <div class="company-indented">Zafer İnşaat Co., Sana'a, Yemen</div>
+        <ul>
+            <li>ABD Büyükelçiliği Projesi - İki yüksek riskli inşaat sahasında güvenlik operasyonlarını koordine etme</li>
+            <li><strong>İç karışıklık sırasında acil tahliye protokollerini yöneterek sıfır kayıp sağlama</strong></li>
+            <li>Personel değerlendirmesi ve güvenlik izin süreçlerini yönetme</li>
+            <li>Zorlu uluslararası ortamda operasyonel güvenliği koruma</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Gözetim Müdürü | Temmuz - Kasım 2012</div>
+        <div class="company-indented">Pasha Group / Casino Pegasus</div>
+        <ul>
+            <li>Kapsamlı CCTV gözetim kurulumu tasarlama ve uygulama</li>
+            <li>Gözetim operasyon protokolleri ve personel eğitim programları oluşturma</li>
+            <li>Optimal performans için gözetim ekibini işe alma ve eğitme</li>
+            <li>Kamera kapsamı ve izleme etkinliğini optimize etme</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Saha Güvenlik Müdürü | Kasım 2010 - Ocak 2012</div>
+        <div class="company-indented">Zafer İnşaat Co.</div>
+        <ul>
+            <li>ABD Büyükelçiliği Projesi - Müteahhit şirket için <strong>yüksek riskli ortamda</strong> güvenlik operasyonlarını yönetme</li>
+            <li>Tüm müteahhit personelin oryantasyon ve güvenlik farkındalık eğitimini denetleme</li>
+            <li>OBO standartlarına uygun güvenlik protokolleri uygulama</li>
+            <li>Zorlu uluslararası ortamda yüksek güvenlik standartlarını koruma</li>
+            <li>OBO ve ABD Büyükelçiliği güvenlik standartlarına uygunluğu sağlama</li>
+            <li>Olay araştırmalarını yürütme ve acil durum müdahale çabalarını koordine etme</li>
+            <li>Güvenlik konularının hızlı ve etkili çözümünü sağlayan personel değerlendirmesi yürütme</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Gözetim Müdürü | Temmuz - Kasım 2010</div>
+        <div class="company-indented">Princess Casinos</div>
+        <ul>
+            <li>Casino Gözetim Sistemi Kurulumunu tasarlama ve uygulamaya yardım etme</li>
+            <li>Operasyonel gözetim protokolleri ve prosedürlerine katkıda bulunma</li>
+            <li>Gözetim izleme yeteneklerini geliştirme</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Operasyon Müdürü / Bölge Müdürü | Nisan 2006 - Şubat 2010</div>
+        <div class="company-indented">Pronet Güvenlik ve Danışmanlık</div>
+        <ul>
+            <li><strong>İki yıl içinde %400 işgücü genişlemesini destekleyen operasyonel iş akışını yeniden mühendislik</strong></li>
+            <li>Operasyonlar, İK, Eğitim, Raporlama ve Denetim genelinde süreçleri optimize etme</li>
+            <li>Önemli iş büyümesi ve genişleme için stratejik planlama yürütme</li>
+            <li>Kapsamlı güvenlik yönetim sistemi geliştirmeye öncülük etme</li>
+            <li>Büyük ölçekli projeler için güvenlik operasyonları planlama ve yürütme</li>
+            <li>İstanbul bölgesinde aynı anda birden fazla güvenlik projesini yönetme</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Bağımsız Güvenlik Danışmanı | Eylül 2008 - Eylül 2009</div>
+        <div class="company-indented">Pronet Güvenlik ve Danışmanlık</div>
+        <ul>
+            <li><strong>Olay raporlama verimliliğini %500 artırma</strong> ve güvenlik açıklarını %50 azaltma</li>
+            <li>Eşzamanlı rol sırasında özel güvenlik danışmanlık hizmetleri sağlama</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Otel Müdür Yardımcısı | Mart - Aralık 2005</div>
+        <div class="company-indented">Marti Resort Hotel</div>
+        <ul>
+            <li>Bölüm başkanlarını koordine etme ve birim satışları, bütçe ve raporlama takibi</li>
+            <li>Gelişmiş otel verimliliği için departmanlar arası operasyonları yönetme</li>
+            <li>Operasyonel performans metrikleri ve stratejik raporlamayı denetleme</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Danışman | Kasım 2004 - Mart 2005</div>
+        <div class="company-indented">Pronet Güvenlik ve Danışmanlık</div>
+        <ul>
+            <li>Akmerkez Alışveriş Merkezi ve çeşitli otel projeleri için danışmanlık projeleri yürütme</li>
+            <li>Kapsamlı risk değerlendirmeleri ve güvenlik anketleri gerçekleştirme</li>
+            <li>Detaylı raporlama ve stratejik güvenlik önerileri sunma</li>
+            <li>Yenilikçi raporlama ve izleme çözümleri geliştirme</li>
+            <li>Güvenlik iyileştirmeleri için stratejik öneriler sunma</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Güvenlik Müdürü | Nisan 2003 - Kasım 2004</div>
+        <div class="company-indented">Marti Resort Hotel</div>
+        <ul>
+            <li><strong>Olağanüstü güvenlik performansı için "Yılın Departmanı" ödülünü kazanma</strong></li>
+            <li>Güvenlik performans değerlendirme verimliliğini iyileştirme ve güvenlik olaylarını azaltma</li>
+            <li>Güvenlik önlemlerini geliştirme ve genel güvenlik duruşunu iyileştirme</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Proje Bazlı Danışman | Aralık 2003 - Şubat 2004</div>
+        <div class="company-indented">Pronet Güvenlik ve Danışmanlık - HSBC Recovery Projesi</div>
+        <ul>
+            <li><strong>Takip recovery projesinde 40 güvenlik görevlisinden oluşan ekibi yönetme</strong></li>
+            <li>Kıdemli danışmanlara Bölge dosyası ve Tehdit Değerlendirmesi hazırlamada yardım etme</li>
+            <li>Acil Durum ve Rutin operasyonel prosedürler geliştirmede yardım etme</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Gözetim ve Güvenlik Müdürü | Ocak - Ağustos 2002</div>
+        <div class="company-indented">Casino Astoria</div>
+        <ul>
+            <li>Gözetim kapsamı ve operasyonel etkinliği iyileştirme</li>
+            <li>Gözetim ve güvenlik personelini ileri izleme tekniklerinde eğitme</li>
+            <li>Genel güvenlik protokolleri ve olay müdahale prosedürlerini geliştirme</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Gözetim Yöneticisi | Temmuz - Aralık 2001</div>
+        <div class="company-indented">Star Cruises</div>
+        <ul>
+            <li>Denetleme yetkisi olmayan gözetim personelinden oluşan ekibi yönetme</li>
+            <li>Denizcilik casino gözetim operasyonlarını yönetme</li>
+            <li>Kruvaziyer gemi ortamı için mevcut gözetim protokollerini uygulama</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Gözetim Müdürü | Haziran 1997 - Temmuz 2001</div>
+        <div class="company-indented">Casino Blindo</div>
+        <ul>
+            <li>Stratejik yükseltmeler yoluyla gözetim sistemi etkinliğini geliştirme</li>
+            <li><strong>Yönetimi ileri gözetim teknolojisine yatırım yapmaya ikna ederek olay tespitini iyileştirme</strong></li>
+            <li>Kapsamlı gözetim çalışma prosedürleri ve sistemleri geliştirme ve uygulama</li>
+            <li>Olay raporlama ve analizi için veri işleme sistemleri kurma</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">Krupiyer-Müfettiş-Gözetim Operatörü-Gözetim Yöneticisi | Haziran 1992 - 1995</div>
+        <div class="company-indented">Emperyal Casinos</div>
+        <ul>
+            <li><strong>Krupiyerden Gözetim Yöneticisine hızlı kariyer ilerlemesi gösterme</strong></li>
+            <li>Yönetimi gözetim sistemini yükseltmeye başarıyla ikna ederek daha etkili güvenlik operasyonlarına yol açma</li>
+            <li>Zemin seviyesinden yönetici seviyesine casino operasyonlarında kapsamlı anlayış kazanma</li>
+            <li>Gözetim teknolojisi ve oyun güvenlik protokollerinde temel uzmanlık geliştirme</li>
+        </ul>
+    </div>
+
+    <div class="section-title">KAYDA DEĞER PROJELER VE BAŞARILAR</div>
+
+    <div class="subsection-title">Uluslararası Güvenlik Projeleri</div>
+    <ul>
+        <li><strong>ABD Büyükelçiliği Konut Projesi, Yemen:</strong> Acil durum protokolleri dahil tam güvenlik yönetimi</li>
+        <li><strong>Büyük Alışveriş Merkezleri:</strong> İstinye Park, Akmerkez, Astoria Mall, Gordion Mall - kapsamlı güvenlik sistemi kurulumu</li>
+        <li><strong>Kurumsal Müşteriler:</strong> Koç Holding, Doğuş Grubu, Turkcell - stratejik güvenlik danışmanlığı</li>
+        <li><strong>Otel Mülkleri:</strong> Marti Resort Hotel, Marti Myra Hotel, Kempinski Hotel Residence - güvenlik yönetimi ve danışmanlık</li>
+    </ul>
+
+    <div class="subsection-title">Yazılım Geliştirme Portföyü</div>
+    <ul>
+        <li><strong>Yapay Zeka Destekli İş Analitiği:</strong> Tahmine dayalı modelleme ve veri odaklı karar verme sistemleri</li>
+        <li><strong>Müşteri Davranış Analizi:</strong> Segmentasyon ve müşteri tutma tahmin sistemleri</li>
+        <li><strong>Yapay Zeka Entegreli Gözetim Operasyon API'si:</strong> LLM Entegreli veri analizi</li>
+        <li><strong>PDF Bilgi Sistemleri:</strong> Doküman analizi için yerel LLM RAG uygulaması</li>
+        <li><strong>Eğitsel İçerik:</strong> Python, Yapay Zeka ve web geliştirme konularında kapsamlı eğitimler</li>
+    </ul>
+
+    <div class="section-title">EĞİTİM VE SERTİFİKALAR</div>
+
+    <div class="subsection-title">Akademik Geçmiş</div>
+    <ul>
+        <li><strong>Ön Lisans</strong> - Turizm ve Otel İşletmeciliği | Muğla Üniversitesi, Türkiye (2009)
+            <br>Not Ortalaması: 3.04/4.0, Her iki dönemde de onur öğrencisi (İlk Dönem: Bölüm birincisi ve onur öğrencisi)</li>
+        <li><strong>Bilgisayar Programcılığı</strong> - Anadolu Üniversitesi, Eskişehir, Türkiye (Tamamlanmamış)
+            <br>Kariyer hedefleriyle daha uyumlu özel kurslar ve uygulamalı projelere odaklanma</li>
+        <li><strong>Lise</strong> - Turizm Otel İşletmeciliği | Altunizade Turizm Okulu, İstanbul (1993)</li>
+    </ul>
+
+    <div class="subsection-title">Mesleki Sertifikalar</div>
+
+    <div class="skill-category">
+        <div class="skill-header">Yapay Zeka ve Makine Öğrenmesi (40+ Özel Kurs)</div>
+        <ul>
+            <li><strong>DeepLearning.AI (16 kurs):</strong>
+                Geliştiriciler için ChatGPT İstem Mühendisliği,
+                LLM Uygulama Geliştirme için LangChain,
+                ChatGPT API ile Sistem Oluşturma,
+                Verilerinizle LangChain Sohbeti,
+                Büyük Dil Modellerini İnce Ayarlama,
+                Metin Gömülmelerini Anlama ve Uygulama,
+                Llama 2&3 ile İstem Mühendisliği,
+                crewAI ile Çoklu Yapay Zeka Ajan Sistemleri,
+                LangGraph'ta Yapay Zeka Ajanları,
+                Çok Modlu Llama 3.2'ye Giriş,
+                Gradio ile Generatif Yapay Zeka Uygulamaları Oluşturma,
+                o1 ile Mantık Yürütme,
+                Anthropic ile Bilgisayar Kullanımına Doğru Oluşturma,
+                Llamaindex ile Ajantik Rag Oluşturma,
+                İş Düşünürleri Semantic Kernel ile Yapay Zeka Eklentileri Oluşturmaya Nasıl Başlayabilir
+            </li>
+            <li><strong>IBM Uzmanlıkları:</strong> Herkes İçin Yapay Zeka Temelleri (3 kurs), IBM Yapay Zeka Geliştirici (6 kurs), Uygulamalı Yapay Zeka Uzmanlığı, Veri Bilimi Profesyonel Sertifikası (9 kurs)</li>
+            <li><strong>Stanford/Coursera:</strong> Makine Öğrenmesi Uzmanlığı</li>
+            <li><strong>Google Cloud:</strong> Vertex AI ile Generatif Yapay Zeka (2 kurs)</li>
+            <li><strong>Duke Üniversitesi:</strong> Ölçekte Bulut Bilişim Çözümleri Oluşturma Uzmanlığı (4 kurs)</li>
+            <li><strong>Workera:</strong> Yapay Zeka Okuryazarlığı ve Yapay Zeka Akıcılığı Değerlendirme sertifikaları</li>
+        </ul>
+    </div>
+
+    <div class="skill-category">
+        <div class="skill-header">Güvenlik ve Risk Yönetimi</div>
+        <ul>
+            <li><strong>ASIS International:</strong> Fiziksel Güvenlik Profesyoneli (PSP) kursları (8 kurs)</li>
+            <li><strong>ASIS Özel Eğitim:</strong> Tehdit Değerlendirmesi, Fiziksel Koruma Sistemleri, CCTV ve Dijital Video, Erişim Kontrol Sistemleri</li>
+            <li><strong>Maryland Üniversitesi:</strong> Terörizmi ve Terörizm Tehdidini Anlama</li>
+            <li><strong>Devlet Sertifikası:</strong> Özel Güvenlik Eğitim Sertifikası</li>
+        </ul>
+    </div>
+
+    <div class="skill-category">
+        <div class="skill-header">Teknik Beceri Geliştirme</div>
+        <ul>
+            <li><strong>Bulut Platformları:</strong> AWS, GCP, Azure, IBM Cloud temelleri (giriş seviyesi)</li>
+            <li><strong>Programlama:</strong> Python, FastAPI, Docker, SQLAlchemy ORM</li>
+            <li><strong>Yapay Zeka Çerçeveleri:</strong> OpenAI, Anthropic, Hugging Face, LangChain, LangGraph, CrewAI, Pydantic-AI</li>
+            <li><strong>Veri Bilimi:</strong> Scikit-learn, Pandas, NumPy</li>
+        </ul>
+    </div>
+
+    <div class="section-title">DİLLER</div>
+    <ul>
+        <li><strong>Türkçe:</strong> Ana dil</li>
+        <li><strong>İngilizce:</strong> İleri seviye/Ana dil</li>
+        <li><strong>Almanca:</strong> Başlangıç</li>
+        <li><strong>Rumence:</strong> Başlangıç</li>
+    </ul>
+
+    <div class="section-title">EK BİLGİLER</div>
+    <ul>
+        <li><strong>Doğum Tarihi:</strong> 18 Ocak 1973</li>
+        <li><strong>Askerlik Durumu:</strong> Yapıldı</li>
+        <li><strong>Uyruk:</strong> Türk</li>
+        <li><strong>Medeni Hal:</strong> Bekar</li>
+        <li><strong>Durum:</strong> Uluslararası görevlendirmeler için uygun</li>
+        <li><strong>Kişisel İlgi Alanları:</strong> Teknoloji inovasyonu, Akdeniz kültürü, yüzme, kedi sevgisi</li>
+    </ul>
+
+    <hr style="margin-top: 30px; border: none; border-top: 1px solid #ccc;">
+    <p style="text-align: center; font-style: italic; color: #666; font-size: 10pt;">Referanslar ve detaylı proje portföyleri talep üzerine sunulabilir</p>
+    
+    <script>
+    // Add page numbers when printing
+    window.onload = function() {
+        // CSS for page numbers in print mode only
+        var style = document.createElement('style');
+        style.type = 'text/css';
+        style.media = 'print';
+        style.innerHTML = `
+            @page {
+                margin-bottom: 1cm;
+            }
+            
+            .page-number {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                font-size: 9pt;
+                color: #666;
+                padding: 10px;
+                content: counter(page);
+            }
+            
+            .page-number:after {
+                content: "Page " counter(page);
+            }
+            
+            .page-number {
+                counter-increment: page;
+            }
+            
+            /* Hide on screen */
+            @media screen {
+                .page-number {
+                    display: none;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Insert page number elements
+        var pageNumber = document.createElement('div');
+        pageNumber.className = 'page-number';
+        document.body.appendChild(pageNumber);
+    };
+    </script>
+</body>
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* Page setup for WeasyPrint */
+        @page {
+            size: A4;
+            margin-top: 0.8in;
+            margin-bottom: 0.3in;
+            margin-left: 0.8in;
+            margin-right: 0.6in; /* Extremely narrow right margin */
+        }
+        
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            font-size: 10.0pt; /* Slightly smaller font for better fit */
+            line-height: 1.15;
+            margin: 0;
+            padding: 0;
+            color: #000000;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #0066CC;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .name {
+            font-size: 24pt;
+            font-weight: bold;
+            color: #0066CC;
+            margin-bottom: 5px;
+        }
+        .title {
+            font-size: 14pt;
+            color: #666666;
+            margin-bottom: 10px;
+        }
+        .contact {
+            font-size: 10pt;
+            color: #666666;
+        }
+        .section-title {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #0066CC;
+            border-bottom: 1px solid #0066CC;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding-bottom: 3px;
+        }
+        .subsection-title {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #333333;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        .job-title {
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 1px;
+        }
+        .job-title-with-date {
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 1px;
+        }
+        .job-date {
+            color: #666666;
+            font-style: italic;
+            font-weight: normal;
+        }
+        .company {
+            font-style: italic;
+            color: #666666;
+            margin-bottom: 0px;
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+        .date {
+            float: right;
+            color: #666666;
+            font-style: italic;
+        }
+        .achievement {
+            margin-left: 15px;
+            margin-bottom: 5px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .skill-category {
+            margin-bottom: 10px;
+        }
+        .skill-header {
+            font-weight: bold;
+            color: #0066CC;
+            margin-bottom: 3px;
+        }
+        .summary-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #0066CC;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .page-break {
+            page-break-before: always;
+        }
+        .job-section {
+            margin-bottom: 15px;
+        }
+        .job-title-line {
+            color: #0066CC;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        .company-indented {
+            margin-left: 20px;
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+        .tutorial-link {
+            color: #0066CC;
+            text-decoration: underline;
+            font-weight: normal;
+        }
+        .tutorial-link:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin-top: 1px; /* Reduced from 5px to 1px to bring lists closer to job headers */
+            margin-bottom: 5px;
+            padding-left: 0px;
+            list-style-type: none; /* Remove default bullets */
+        }
+        li {
+            margin-bottom: 3px;
+            margin-left: 20px;
+            text-indent: -20px;
+        }
+        li:before {
+            content: "- "; /* Add hyphen as bullet */
+        }
+        /* Handle nested lists */
+        li ul {
+            margin-top: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="name">TOGAY TUNCA</div>
+        <div class="title">Casino Surveillance Manager | Security Consultant | AI Software Developer</div>
+        <div class="contact">
+            📧 togay.tunca@gmail.com | 📱 +90 543 898-18-48 | 📍 Istanbul, Turkey<br>
+            🔗 <a href="https://www.linkedin.com/feed/" class="tutorial-link">LinkedIn</a> | 💻 <a href="https://github.com/evinai" class="tutorial-link">GitHub</a>
+        </div>
+    </div>
+
+    <div class="section-title">PROFESSIONAL SUMMARY</div>
+    <div class="summary-box">
+        Dynamic <strong>Casino Surveillance Manager</strong> and <strong>Security Consultant</strong> with 24+ years of international experience spanning casino operations, corporate security, and hospitality management across <strong>Turkey, Romania, Guatemala, Yemen, Philippines</strong>. Currently leveraging expertise in <strong>Generative AI and software development</strong> to create innovative surveillance and security solutions.
+        <br><br>
+        <strong>Core Expertise:</strong> Casino surveillance systems, security risk assessment, multi-site operations management, AI-powered analytics, and full-stack development with Python/FastAPI. Skilled in overseeing complex projects, optimizing systems, and leading large teams in multicultural environments.
+        <br><br>
+        <strong>Unique Value Proposition:</strong> Bridge traditional security operations with cutting-edge AI technology to enhance surveillance effectiveness and operational efficiency. Passionate about integrating Generative AI and data-driven insights into business practices to optimize efficiency, improve decision-making, and foster innovation.
+    </div>
+    <div class="section-title">KEY COMPETENCIES</div>
+    <div class="skills-grid">
+        <div>
+            <div class="subsection-title">Casino & Surveillance Operations</div>
+            <ul>
+                <li>CCTV surveillance system design and implementation</li>
+                <li>Gaming security protocols and incident detection</li>
+                <li>Real-time monitoring and threat assessment</li>
+                <li>Surveillance team leadership and training</li>
+            </ul>
+            
+            <div class="subsection-title">Security Management & Consulting</div>
+            <ul>
+                <li>Corporate security strategy development</li>
+                <li>Physical security system integration</li>
+                <li>Risk assessment and vulnerability analysis</li>
+                <li>Emergency response coordination</li>
+                <li>International project security management</li>
+            </ul>
+        </div>
+        <div>
+            <div class="subsection-title">AI Development & Technology</div>
+            <ul>
+                <li>Python development with FastAPI for AI-powered applications</li>
+                <li>Large Language Model integration (OpenAI, Anthropic, Hugging Face)</li>
+                <li>AI agent frameworks (LangChain, LangGraph, CrewAI)</li>
+                <li>Cloud platforms and containerization (AWS, GCP, Docker)</li>
+                <li>Database management and data processing tools</li>
+            </ul>
+            
+            <div class="subsection-title">Leadership & Operations</div>
+            <ul>
+                <li>Multicultural team management (900+ personnel)</li>
+                <li>Strategic planning and process optimization</li>
+                <li>Training program development</li>
+                <li>Vendor assessment and contract negotiation</li>
+            </ul>
+        </div>
+    </div>
+    <div class="section-title">PROFESSIONAL EXPERIENCE</div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Independent Consultant - Generative AI Development | June 2023 - Present</div>
+        <div class="company-indented">Self-Employed</div>
+        <ul>
+            <li>Developing AI-powered surveillance and security analytics solutions</li>
+            <li>Created 20+ specialized APIs including (under developement) casino surveillance and security operations and analytics platforms</li>
+            <li>Focused on integrating LLMs with traditional business processes for efficiency and optimization</li>
+            <li><strong>Key Projects:</strong>
+                <ul>
+                    <li><code>casino_surveillance_operations_1024_v2</code>:(under-development) Analytics API</li>
+                    <li><code>ai_fast_local_rag_knowledge_1224_E001</code>: Enhanced local RAG knowledge system</li>
+                    <li><code>ai_graph_parallel_market_research_0525</code>: Parallel processing market research analytics</li>
+                    <li><code>ai_graph_business_strategy_0525</code>: AI-powered business strategy development platform</li>
+                    <li><code>ai_graph_medical_rag_0525</code>: Medical knowledge retrieval and analysis system</li>
+                    <li><code>ai_profile_knowledge_creator_0125_E002</code>: AI-driven knowledge profile generator</li>
+                    <li><code>ai_fast_crew_planning_estimation_1224_G003</code>: Resource planning and estimation system</li>
+                </ul>
+            </li>
+            <br>
+            <li><strong>Published Tutorials & Educational Content:</strong>
+                <ul>
+                    <li><a href="https://evinai.github.io/Tutorial-Python-0626/" class="tutorial-link">Python Learning for All Ages</a> - Comprehensive Python programming tutorial</li>
+                    <li><a href="https://evinai.github.io/Tutorials_All_0626/" class="tutorial-link">AI Programming Tutorial-Technical Hub-Fundamentals</a> - Introduction to AI programming concepts</li>
+                    <li><a href="https://evinai.github.io/RAG_SYSTEMS_Tutorial_0625/" class="tutorial-link">RAG Systems Tutorial</a> - Advanced RAG implementation guide</li>
+                    <li><a href="https://evinai.github.io/JINJA_FASTAPI_Tutorial_0626/" class="tutorial-link">Jinja FastAPI Tutorial</a> - Web development with FastAPI and Jinja templates</li>
+                    <li><a href="https://evinai.github.io/ai_costomer_service_E009/" class="tutorial-link">AI Customer Service System</a> - AI-powered customer support implementation</li>
+                    <li><a href="https://evinai.github.io/ai_fast_graph_restaurant_0525/" class="tutorial-link">AI Graph Restaurant System</a> - Restaurant management with AI analytics</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Surveillance Manager | Feb - June 2023</div>
+        <div class="company-indented">Nima Group / Club Royal Caribbean</div>
+        <ul>
+            <li>Upgraded gaming surveillance systems improving incident detection accuracy</li>
+            <li>On the job training for surveillance staff on advanced monitoring techniques</li>
+            <li>Implemented new surveillance protocols enhancing security compliance</li>
+            <li><strong>Reduced surveillance blind spots by 90%</strong> through strategic camera placement and system optimization</li>
+            <li>Optimized surveillance system performance</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Independent Consultant - AI Training | Jan 2018 - Feb 2023</div>
+        <div class="company-indented">Self-Employed</div>
+        <ul>
+            <li>During the COVID-19 pandemic, shifted focus to self-development and advanced training in Generative AI</li>
+            <li><strong>Completed 40+ specialized courses</strong> in AI and machine learning technologies</li>
+            <li>Worked on personal projects including AI-driven casino surveillance systems and KPI tracking</li>
+            <li>Honed expertise in AI models and their practical applications across various industries</li>
+        </ul>
+    </div>
+    
+    <div class="job-section">
+        <div class="job-title-line">- Administrative Manager / Site Security Manager | Jun 2017 - Jan 2018</div>
+        <div class="company-indented">U.S. Embassy Construction Project, Philippines<br><em>Zafer Construction Co. / Framaco Philippines Inc.</em></div>
+        <ul>
+            <li>Pre-launch mobilization phase adminsitrative coordination, personnel vetting, staff selection</li>
+            <li><strong>Successfully recruited and vetted 900+ skilled workers</strong> achieving 100% staffing ahead of schedule</li>
+            <li>Coordinated vendor selection, assessment, and contract negotiations</li>
+            <li>Oversaw all administrative and aprtial security aspects of an international construction project</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Security Consultant - Analyst | Nov 2015 - May 2017</div>
+        <div class="company-indented">ISCD Security Consultancy</div>
+        <ul>
+            <li>Conducted comprehensive security risk assessments for corporate clients</li>
+            <li>Developed enhanced risk assessment models improving detection accuracy</li>
+            <li>Produced detailed consultancy reports and strategic recommendations</li>
+            <li>Specialized physical, and corporate facility security evaluations</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Independent Consultant - Market Analysis | Oct - Dec 2016</div>
+        <div class="company-indented">Zafer Construction Co.</div>
+        <ul>
+            <li>Conducted in-depth market analysis for Philippines pre-project phase</li>
+            <li>Gathered and assessed comprehensive market data</li>
+            <li>Provided strategic insights for project planning and implementation</li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Site Security Manager | Nov 2012 - Feb 2015</div>
+        <div class="company-indented">Zafer Construction Co., Sana'a, Yemen</div>
+        <ul>
+            <li>U.S. Embassy Project - Coordinated security operations across two high-risk construction sites</li>
+            <li><strong>Led emergency evacuation protocols during civil unrest</strong> ensuring zero casualties</li>
+            <li>Managed personnel vetting and security clearance processes</li>
+            <li>Maintained operational security in challenging international environment</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Surveillance Manager | Jul - Nov 2012</div>
+        <div class="company-indented">Pasha Group / Casino Pegasus</div>
+        <ul>
+            <li>Designed and implemented comprehensive CCTV surveillance setup</li>
+            <li>Established surveillance operations protocols and staff training programs</li>
+            <li>Recruited and trained surveillance team for optimal performance</li>
+            <li>Optimized camera coverage and monitoring effectiveness</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Site Security Manager | Nov 2010 - Jan 2012</div>
+        <div class="company-indented">Zafer Construction Co.</div>
+        <ul>
+            <li>U.S. Embassy Project-Managed security operations for contractor company <strong>in a high-risk environment</strong></li>
+            <li>Oversaw orientation and security awareness training of all contractor personnel</li>
+            <li>Implemented security protocols ensuring compliance with OBO standards</li>
+            <li>Maintained high security standards in a challenging international environment</li>
+            <li>Maintained high security standards in a challenging international environment</li>
+            <li>Led incident investigations and coordinated emergency response efforts</li>
+            <li>Conducted personnel vetting ensuring swift and effective resolution of security matters</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Surveillance Manager | Jul - Nov 2010</div>
+        <div class="company-indented">Princess Casinos</div>
+        <ul>
+            <li>Assisted in designing and implementing Casino Surveillance Systems Setup</li>
+            <li>Contributed to operational surveillance protocols and procedures</li>
+            <li>Enhanced surveillance monitoring capabilities</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Operations Manager / Area Manager | Apr 2006 - Feb 2010</div>
+        <div class="company-indented">Pronet Security and Consultancy</div>
+        <ul>
+            <li><strong>Re-engineered operational workflow supporting 400% workforce expansion</strong> within two years</li>
+            <li>Optimized processes across Operations, HR, Training, Reporting, and Auditing</li>
+            <li>Led strategic planning for significant business growth and expansion</li>
+            <li>Spearheaded the development of a comprehensive security management system</li>
+            <li>Planning and executing security operations for large-scale projects</li>
+            <li>Managed multiple security projects simultaneously across Istanbul region</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Independent Security Consultant | Sep 2008 - Sep 2009</div>
+        <div class="company-indented">Pronet Security and Consultancy</div>
+        <ul>
+            <li><strong>Enhanced incident reporting efficiency by 500%</strong> and reduced security vulnerabilities by 50%</li>
+            <li>Provided specialized security consulting services during concurrent role</li>
+         
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Assistant Hotel Manager | Mar - Dec 2005</div>
+        <div class="company-indented">Marti Resort Hotel</div>
+        <ul>
+            <li>Coordinated department heads and tracked unit sales, budget, and reporting</li>
+            <li>Managed cross-departmental operations for enhanced hotel efficiency</li>
+            <li>Oversaw operational performance metrics and strategic reporting</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Consultant | Nov 2004 - Mar 2005</div>
+        <div class="company-indented">Pronet Security and Consultancy</div>
+        <ul>
+            <li>Conducted consultancy projects for Akmerkez Shopping Mall and various hotel projects</li>
+            <li>Performed comprehensive risk assessments and security surveys</li>
+            <li>Delivered detailed reporting and strategic security recommendations</li>
+            <li>Developed innovative reporting and monitoring solutions</li>
+            <li>Delivered strategic recommendations for security improvements</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Security Manager | Apr 2003 - Nov 2004</div>
+        <div class="company-indented">Marti Resort Hotel</div>
+        <ul>
+            <li><strong>Achieved "Department of the Year" award</strong> for outstanding security performance</li>
+            <li>Improved security performance evaluation efficiency and reduced security incidents</li>
+            <li>Enhanced security measures and improved overall security posture</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Project Based Consultant | Dec 2003 - Feb 2004</div>
+        <div class="company-indented">Pronet Security & Consultancy - HSBC Recovery Project</div>
+        <ul>
+            <li><strong>Led a team of 40 security officers</strong> on follow-up recovery project</li>
+            <li>Assisted senior consultants in preparation of Area file and Threat Assessment</li>
+            <li>Asssisted in developing Emergency and Routine operational procedures</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Surveillance and Security Manager | Jan - Aug 2002</div>
+        <div class="company-indented">Casino Astoria</div>
+        <ul>
+            <li>Improved surveillance coverage and operational effectiveness</li>
+            <li>Trained surveillance and security staff in advanced monitoring techniques</li>
+            <li>Enhanced overall security protocols and incident response procedures</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Surveillance Executive | Jul - Dec 2001</div>
+        <div class="company-indented">Star Cruises</div>
+        <ul>
+            <li>Led a team of non-supervisory surveillance staff</li>
+            <li>Managed maritime casino surveillance operations</li>
+            <li>Implemented existing surveillance protocols for cruise ship environment</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">- Surveillance Manager | Jun 1997 - Jul 2001</div>
+        <div class="company-indented">Casino Blindo</div>
+        <ul>
+            <li>Enhanced surveillance system effectiveness through strategic upgrades</li>
+            <li><strong>Persuaded management to invest in advanced surveillance technology</strong> resulting in improved incident detection</li>
+            <li>Developed and implemented comprehensive surveillance working procedures and systems</li>
+            <li>Established data processing systems for incident reporting and analysis</li>
+        </ul>
+    </div>
+
+    <div class="job-section">
+        <div class="job-title-line">Dealer-Inspector-Surveillance Operator-Surveillance Executive | Jun 1992 - 1995</div>
+        <div class="company-indented">Emperyal Casinos</div>
+        <ul>
+            <li><strong>Progressed from Dealer to Surveillance Executive</strong> demonstrating rapid career advancement</li>
+            <li>Successfully persuaded management to upgrade the surveillance system, leading to more effective security operations</li>
+            <li>Gained comprehensive understanding of casino operations from floor level to executive management</li>
+            <li>Developed foundational expertise in surveillance technology and gaming security protocols</li>
+        </ul>
+    </div>
+
+    <div class="section-title">NOTABLE PROJECTS & ACHIEVEMENTS</div>
+
+    <div class="subsection-title">International Security Projects</div>
+    <ul>
+        <li><strong>U.S. Embassy Housing Project, Yemen:</strong> Complete security management including emergency protocols</li>
+        <li><strong>Major Shopping Malls:</strong> Istinye Park, Akmerkez, Astoria Mall, Gordion Mall - comprehensive security system setup</li>
+        <li><strong>Corporate Clients:</strong> Koc Holding, Dogus Group, Turkcell - strategic security consultancy</li>
+        <li><strong>Hotel Properties:</strong> Marti Resort Hotel, Marti Myra Hotel, Kempinski Hotel Residence - security management and consultancy</li>
+    </ul>
+
+    <div class="subsection-title">Software Development Portfolio</div>
+    <ul>
+        <li><strong>AI-Powered Business Analytics:</strong> Predictive modeling and data-driven decision-making systems</li>
+        <li><strong>Customer Behavior Analysis:</strong> Segmentation and retention prediction systems</li>
+        <li><strong>AI-Integrated Surveillance Operations API:</strong> LLM Integrated data analyisis</li>
+        <li><strong>PDF Knowledge Systems:</strong> Local LLM RAG implementation for document analysis</li>
+        <li><strong>Educational Content:</strong> Comprehensive tutorials on Python, AI, and web development</li>
+    </ul>
+
+    <div class="section-title">EDUCATION & CERTIFICATIONS</div>
+
+    <div class="subsection-title">Academic Background</div>
+    <ul>
+        <li><strong>Associate Degree</strong> - Tourism and Hotel Management | University of Mugla, Turkey (2009)
+            <br>GPA: 3.04/4.0, Honors in both semesters (First Semester: Ranked top of department with Honors)</li>
+        <li><strong>Computer Programming</strong> - Anadolu University, Eskişehir, Turkey (Not completed)
+            <br>Redirected focus to specialized coursework and hands-on projects that better aligned with career goals</li>
+        <li><strong>High School</strong> - Tourism Hotel Management | Altunizade Tourism School, Istanbul (1993)</li>
+    </ul>
+
+    <div class="subsection-title">Professional Certifications</div>
+
+    <div class="skill-category">
+        <div class="skill-header">AI & Machine Learning (40+ Specialized Courses)</div>
+        <ul>
+            <li><strong>DeepLearning.AI (16 courses):</strong>
+                ChatGPT Prompt Engineering for Developers,
+                LangChain for LLM Application Development,
+                Building Systems with the ChatGPT API,
+                LangChain Chat with Your Data,
+                Finetuning Large Language Models,
+                Understanding and Applying Text Embeddings,
+                Prompt Engineering with Llama 2&3,
+                Multi AI Agent Systems with crewAI,
+                AI Agents in LangGraph,
+                Introduction Multimodal Llama 3.2,
+                Building Generative AI Applications with Gradio,
+                Reasoning with o1,
+                Building toward Computer Use with Anthropic,
+                Building Agentic Rag with Llamaindex,
+                How Business Thinkers Can Start Building AI Plugins With Semantic Kernel
+            </li>
+            <li><strong>IBM Specializations:</strong> AI Foundations for Everyone (3 courses), IBM AI Developer (6 courses), Applied AI Specialization, Data Science Professional Certificate (9 courses)</li>
+            <li><strong>Stanford/Coursera:</strong> Machine Learning Specialization</li>
+            <li><strong>Google Cloud:</strong> Generative AI with Vertex AI (2 courses)</li>
+            <li><strong>Duke University:</strong> Building Cloud Computing Solutions at Scale Specialization (4 courses)</li>
+            <li><strong>Workera:</strong> AI Literacy and AI Fluency Assessment certifications</li>
+        </ul>
+    </div>
+
+    <div class="skill-category">
+        <div class="skill-header">Security & Risk Management</div>
+        <ul>
+            <li><strong>ASIS International:</strong> Physical Security Professional (PSP) courses (8 courses)</li>
+            <li><strong>ASIS Specialized Training:</strong> Threat Assessment, Physical Protection Systems, CCTV & Digital Video, Access Control Systems</li>
+            <li><strong>University of Maryland:</strong> Understanding Terrorism and Terrorism Threat</li>
+            <li><strong>Government Certification:</strong> Private Security Training Certificate</li>
+        </ul>
+    </div>
+
+    <div class="skill-category">
+        <div class="skill-header">Technical Skills Development</div>
+        <ul>
+            <li><strong>Cloud Platforms:</strong> AWS, GCP, Azure, IBM Cloud fundamentals (entry-level)</li>
+            <li><strong>Programming:</strong> Python, FastAPI, Docker, SQLAlchemy ORM</li>
+            <li><strong>AI Frameworks:</strong> OpenAI, Anthropic, Hugging Face, LangChain, LangGraph, CrewAI, Pydantic-AI</li>
+            <li><strong>Data Science:</strong> Scikit-learn, Pandas, NumPy </li>
+        </ul>
+    </div>
+
+    <div class="section-title">LANGUAGES</div>
+    <ul>
+        <li><strong>Turkish:</strong> Native</li>
+        <li><strong>English:</strong> Advanced/Native</li>
+        <li><strong>German:</strong> Elementary</li>
+        <li><strong>Romanian:</strong> Elementary</li>
+    </ul>
+
+    <div class="section-title">ADDITIONAL INFORMATION</div>
+    <ul>
+        <li><strong>Date of Birth:</strong> January 18, 1973</li>
+        <li><strong>Military Service:</strong> Completed</li>
+        <li><strong>Nationality:</strong> Turkish</li>
+        <li><strong>Marital Status:</strong> Single</li>
+        <li><strong>Status:</strong> Available for international assignments</li>
+        <li><strong>Personal Interests:</strong> Technology innovation, Mediterranean culture, swimming, cat enthusiast</li>
+    </ul>
+
+    <hr style="margin-top: 30px; border: none; border-top: 1px solid #ccc;">
+    <p style="text-align: center; font-style: italic; color: #666; font-size: 10pt;">References and detailed project portfolios available upon request</p>
+    
+    <script>
+    // Add page numbers when printing
+    window.onload = function() {
+        // CSS for page numbers in print mode only
+        var style = document.createElement('style');
+        style.type = 'text/css';
+        style.media = 'print';
+        style.innerHTML = `
+            @page {
+                margin-bottom: 1cm;
+            }
+            
+            .page-number {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                font-size: 9pt;
+                color: #666;
+                padding: 10px;
+                content: counter(page);
+            }
+            
+            .page-number:after {
+                content: "Page " counter(page);
+            }
+            
+            .page-number {
+                counter-increment: page;
+            }
+            
+            /* Hide on screen */
+            @media screen {
+                .page-number {
+                    display: none;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Insert page number elements
+        var pageNumber = document.createElement('div');
+        pageNumber.className = 'page-number';
+        document.body.appendChild(pageNumber);
+    };
+    </script>
+</body>
+</html>

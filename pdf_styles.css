@@ -1,0 +1,34 @@
+@page {
+    size: A4;
+    margin: 0.45in;
+    
+    @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        font-size: 9pt;
+        color: #666666;
+        font-family: Arial, sans-serif;
+        text-align: right;
+        margin-right: 0.1in;
+        margin-bottom: 0.25in;
+    }
+}
+
+/* Additional styling to make the output look more like pdfkit */
+body {
+    /* Force font size adjustment for better fit */
+    font-size: 10.5pt !important;  
+    line-height: 1.12 !important;
+    /* Slightly reduce overall scale to fit more content */
+    transform: scale(0.97);
+    transform-origin: top left;
+}
+
+/* Optimize for PDF print */
+.page-break {
+    page-break-before: always;
+}
+
+/* Hide URLs when printing */
+a[href]:after {
+    content: none !important;
+}
