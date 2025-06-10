@@ -154,16 +154,24 @@
         /* Web-specific styling for better browser viewing */
         @media screen {
             body {
+                background-color: #f5f5f5 !important;
+                margin: 0 !important;
+                padding: 20px !important;
+            }
+            
+            .web-container {
                 max-width: 8.5in;
-                margin: 20px auto;
-                padding: 20px;
+                margin: 0 auto;
+                padding: 30px;
                 background-color: #fff;
-                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                box-shadow: 0 0 15px rgba(0,0,0,0.1);
+                border-radius: 8px;
             }
         }
     </style>
 </head>
 <body>
+    <div class="web-container">
     <div class="header">
         <div class="name">TOGAY TUNCA</div>
         <div class="title">Casino Surveillance Manager | Security Consultant | AI Software Developer</div>
@@ -610,5 +618,6 @@
         document.body.appendChild(pageNumber);
     };
     </script>
+    </div> <!-- Close web-container -->
 </body>
 </html>
