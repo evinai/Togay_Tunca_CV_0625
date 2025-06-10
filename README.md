@@ -97,8 +97,8 @@ To run locally:
 
 ## 📞 Contact Information
 
-- **Email**: [Add your email]
-- **GitHub**: [Add your GitHub profile]
+- **Email**: [togay.tunca@gmail.com]
+- **GitHub**: [[Add your GitHub profile](https://github.com/evinai)]
 - **Location**: International
 
 ---
