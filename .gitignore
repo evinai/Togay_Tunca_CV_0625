@@ -1,5 +1,5 @@
-# Generated PDF files
-*.pdf
+# Generated PDF files (commented out for GitHub Pages deployment)
+# *.pdf
 
 # Python cache and virtual environment
 __pycache__/

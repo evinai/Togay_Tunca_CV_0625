@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Togay Tunca - CV Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 3rem;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+        }
+        
+        .header {
+            margin-bottom: 2rem;
+        }
+        
+        .name {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0066CC;
+            margin-bottom: 0.5rem;
+        }
+        
+        .title {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .description {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .cv-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cv-card {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .cv-card:hover {
+            border-color: #0066CC;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,102,204,0.1);
+        }
+        
+        .cv-card h3 {
+            color: #0066CC;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .cv-card .flag {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cv-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .cv-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #0066CC;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .cv-link:hover {
+            background: #0052a3;
+        }
+        
+        .pdf-link {
+            background: #28a745;
+        }
+        
+        .pdf-link:hover {
+            background: #1e7e34;
+        }
+        
+        .footer {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e9ecef;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .contact-info {
+            margin-top: 1rem;
+        }
+        
+        .contact-info a {
+            color: #0066CC;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .cv-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="name">TOGAY TUNCA</div>
+            <div class="title">Casino Surveillance Manager | Security Consultant | AI Software Developer</div>
+            <div class="description">
+                24+ years of international experience in casino operations, security, and AI development. 
+                Currently developing innovative surveillance and security solutions using Generative AI.
+            </div>
+        </div>
+        
+        <div class="cv-options">
+            <div class="cv-card">
+                <div class="flag">🇺🇸</div>
+                <h3>English CV</h3>
+                <div class="cv-links">
+                    <a href="cv_word_english_v3.html" class="cv-link" target="_blank">View Online</a>
+                    <a href="Togay_Tunca_CV_WeasyPrint_v3.pdf" class="cv-link pdf-link" target="_blank">Download PDF</a>
+                </div>
+            </div>
+            
+            <div class="cv-card">
+                <div class="flag">🇹🇷</div>
+                <h3>Turkish CV / Türkçe Özgeçmiş</h3>
+                <div class="cv-links">
+                    <a href="cv_word_turkish_v3.html" class="cv-link" target="_blank">Çevrimiçi Görüntüle</a>
+                    <a href="Togay_Tunca_CV_Turkish_WeasyPrint_v3.pdf" class="cv-link pdf-link" target="_blank">PDF İndir</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Professional Focus:</strong> Generative AI Development • Casino Surveillance Systems • Security Analytics</p>
+            <div class="contact-info">
+                <p>📧 Contact: <a href="mailto:togay.tunca@example.com">togay.tunca@example.com</a></p>
+                <p>🌐 GitHub: <a href="https://github.com/evinai" target="_blank">github.com/evinai</a></p>
+                <p>📍 Location: International (Turkey, Romania, Guatemala, Yemen, Philippines)</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
