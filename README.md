@@ -44,7 +44,7 @@ Upload these files to your repository:
 
 Your CV will be available at:
 ```
-https://[your-username].github.io/[repository-name]/
+https://[evinai].github.io/[Togay_Tunca_CV_0625]/
 ```
 
 ## 📁 File Structure
@@ -98,7 +98,7 @@ To run locally:
 ## 📞 Contact Information
 
 - **Email**: [togay.tunca@gmail.com]
-- **GitHub**: [[Add your GitHub profile](https://github.com/evinai)]
+- **GitHub**: [[evinai](https://github.com/evinai)]
 - **Location**: International
 
 ---
