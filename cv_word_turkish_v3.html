@@ -26,6 +26,25 @@
             padding-bottom: 15px;
             margin-bottom: 20px;
         }
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 20%;
+            border: 2px solid #0066CC;
+        }
+        .name-section {
+            text-align: center;
+        }
         .name {
             font-size: 24pt;
             font-weight: bold;
@@ -163,8 +182,13 @@
 <body>
     <div class="web-container">
     <div class="header">
-        <div class="name">TOGAY TUNCA</div>
-        <div class="title">Casino Gözetim Müdürü | Güvenlik Danışmanı | Yapay Zeka Python Yazılım Geliştirici</div>
+        <div class="header-content">
+            <img src="togayresım.png" alt="Togay Tunca" class="profile-image">
+            <div class="name-section">
+                <div class="name">TOGAY TUNCA</div>
+                <div class="title">Casino Gözetim Müdürü | Güvenlik Danışmanı | Yapay Zeka Python Yazılım Geliştirici</div>
+            </div>
+        </div>
         <div class="contact">
             📧 togay.tunca@gmail.com | 📱 +90 543 898-18-48 | 📍 İstanbul, Türkiye<br>
             🔗 <a href="https://www.linkedin.com/feed/" class="tutorial-link">LinkedIn</a> | 💻 <a href="https://github.com/evinai" class="tutorial-link">GitHub</a>

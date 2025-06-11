@@ -55,6 +55,9 @@ def convert_with_weasyprint(html_file, output_file, css_file=None):
             padding-left: 15px !important;
         }
         li { margin-bottom: 2px !important; }
+        
+        /* Hide images in PDF generation */
+        img { display: none !important; }
         """
     )
 
