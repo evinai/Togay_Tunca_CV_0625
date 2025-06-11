@@ -36,6 +36,29 @@
             margin-bottom: 2rem;
         }
         
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 20%;
+            border: 4px solid #0066CC;
+            box-shadow: 0 4px 15px rgba(0,102,204,0.3);
+        }
+        
+        .name-section {
+            text-align: center;
+        }
+        
         .name {
             font-size: 2.5rem;
             font-weight: bold;
@@ -151,15 +174,24 @@
             .container {
                 padding: 2rem;
             }
+            
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="name">TOGAY TUNCA</div>
-            <div class="flag">🇹🇷</div>
-            <div class="title">Casino Surveillance Manager | Security Consultant | AI-Python Developer</div>
+            <div class="header-content">
+                <img src="togayresım.png" alt="Togay Tunca" class="profile-image">
+                <div class="name-section">
+                    <div class="name">TOGAY TUNCA</div>
+                    <div class="title">Casino Surveillance Manager | Security Consultant | AI-Python Developer</div>
+                </div>
+            </div>
             <div class="description">
                 22+ years of international experience in casino operations, security management, and a new journey in AI development with python. 
                 Currently developing innovative solutions for variety of fields using Generative AI.
@@ -168,7 +200,6 @@
         
         <div class="cv-options">
             <div class="cv-card">
-                <div class="cv-card">
                 <div class="flag">🇹🇷</div>
                 <h3>Türkçe Özgeçmiş</h3>
                 <div class="cv-links">
@@ -176,6 +207,8 @@
                     <a href="Togay_Tunca_CV_Turkish_WeasyPrint_v3.pdf" class="cv-link pdf-link" target="_blank">PDF İndir</a>
                 </div>
             </div>
+
+            <div class="cv-card">
                 <div class="flag">🇺🇸</div>
                 <h3>English CV</h3>
                 <div class="cv-links">
@@ -183,14 +216,12 @@
                     <a href="Togay_Tunca_CV_WeasyPrint_v3.pdf" class="cv-link pdf-link" target="_blank">Download PDF</a>
                 </div>
             </div>
-            
-            
         </div>
         
         <div class="footer">
             <p><strong>Professional Focus:</strong> Generative AI Development • Casino Surveillance Systems • Security Analytics</p>
             <div class="contact-info">
-                <p>📧 Contact: <a href="mailto:togay.tunca@gmail.com">togay.tunca@example.com</a></p>
+                <p>📧 Contact: <a href="mailto:togay.tunca@gmail.com">togay.tunca@gmail.com</a></p>
                 <p>🌐 GitHub: <a href="https://github.com/evinai" target="_blank">github.com/evinai</a></p>
                 <p>📍 Location: International (Turkey, Romania, Guatemala, Yemen, Philippines, Trindad Tobago)</p>
             </div>
