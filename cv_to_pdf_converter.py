@@ -1,14 +1,11 @@
 #!/usr/bin/env python3
 """
-CV to PDF Converter - Compare WeasyPrint and pdfkit outputs
----------------------------------------------------------
-This script converts your HTML CV to PDF using both WeasyPrint and pdfkit,
-allowing you to compare which one produces better results.
+CV to PDF Converter - WeasyPrint only
+--------------------------------------
+This script converts your HTML CV to PDF using WeasyPrint.
 
 Requirements:
 - WeasyPrint: pip install weasyprint
-- pdfkit: pip install pdfkit
-- wkhtmltopdf: system installation required (e.g., apt-get install wkhtmltopdf)
 """
 
 import os
@@ -18,26 +15,14 @@ from pathlib import Path
 
 def check_requirements():
     """Check if required libraries are installed"""
-    missing = []
-
     try:
-        import weasyprint
-    except ImportError:
-        missing.append("WeasyPrint (pip install weasyprint)")
+        import weasyprint  # noqa: F401
 
-    try:
-        import pdfkit
+        return True
     except ImportError:
-        missing.append("pdfkit (pip install pdfkit)")
-
-    if missing:
-        print("Missing required libraries:")
-        for lib in missing:
-            print(f"- {lib}")
-        print("\nPlease install them and try again.")
+        print("Missing required library: WeasyPrint")
+        print("Please install it: pip install weasyprint")
         return False
-
-    return True
 
 
 def convert_with_weasyprint(html_file, output_file, css_file=None):
@@ -86,40 +71,6 @@ def convert_with_weasyprint(html_file, output_file, css_file=None):
     print(f"✅ WeasyPrint PDF created: {output_file}")
 
 
-def convert_with_pdfkit(html_file, output_file):
-    """Convert HTML to PDF using pdfkit with optimized options for page fit"""
-    import pdfkit
-
-    print(f"Converting with pdfkit: {output_file}")
-
-    # Configuration options for better page fitting
-    options = {
-        # Page settings
-        "page-size": "A4",
-        "margin-top": "0.6in",
-        "margin-right": "0.5in",
-        "margin-bottom": "0.6in",
-        "margin-left": "0.5in",
-        # Note: Page numbering requires the patched version of wkhtmltopdf
-        # Install from: https://wkhtmltopdf.org/downloads.html
-        # "footer-right": "Page [page] of [topage]",
-        # "footer-font-size": "9",
-        # "footer-font-name": "Calibri",
-        # "footer-spacing": "5",
-        # Content adjustments
-        "dpi": 400,
-        "zoom": 0.45,  # Reduced from 0.50
-        # Other settings
-        "encoding": "UTF-8",
-        "print-media-type": True,
-    }
-
-    # Convert to PDF
-    pdfkit.from_file(html_file, output_file, options=options)
-
-    print(f"✅ pdfkit PDF created: {output_file}")
-
-
 def main():
     """Main function to handle command-line usage"""
     if not check_requirements():
@@ -128,17 +79,34 @@ def main():
     # Paths
     base_dir = "/home/evinai/Desktop/Togay_Tunca_CV_0625"
 
-    # Check for Turkish version argument
-    if len(sys.argv) > 1 and sys.argv[1] == "--turkish":
-        html_file = os.path.join(base_dir, "cv_word_turkish_v3.html")
-        weasyprint_output = os.path.join(
-            base_dir, "Togay_Tunca_CV_Turkish_WeasyPrint_v3.pdf"
-        )
-        pdfkit_output = os.path.join(base_dir, "Togay_Tunca_CV_Turkish_pdfkit_v3.pdf")
+    # Check for Turkish version argument or specific file
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "--turkish":
+            html_file = os.path.join(base_dir, "cv_word_turkish_v3.html")
+            output_file = os.path.join(
+                base_dir, "Togay_Tunca_CV_Turkish_WeasyPrint_v3.pdf"
+            )
+        elif sys.argv[1].endswith(".html"):
+            # Direct file path provided
+            html_file = (
+                sys.argv[1]
+                if os.path.isabs(sys.argv[1])
+                else os.path.join(base_dir, sys.argv[1])
+            )
+            # Determine output name based on input file
+            if "turkish" in os.path.basename(html_file).lower():
+                output_file = os.path.join(
+                    base_dir, "Togay_Tunca_CV_Turkish_WeasyPrint_v3.pdf"
+                )
+            else:
+                output_file = os.path.join(base_dir, "Togay_Tunca_CV_WeasyPrint_v3.pdf")
+        else:
+            print("Usage: python cv_to_pdf_converter.py [--turkish | filename.html]")
+            return
     else:
+        # Default to English
         html_file = os.path.join(base_dir, "cv_word_english_v3.html")
-        weasyprint_output = os.path.join(base_dir, "Togay_Tunca_CV_WeasyPrint_v3.pdf")
-        pdfkit_output = os.path.join(base_dir, "Togay_Tunca_CV_pdfkit_v3.pdf")
+        output_file = os.path.join(base_dir, "Togay_Tunca_CV_WeasyPrint_v3.pdf")
 
     css_file = os.path.join(base_dir, "pdf_styles.css")
 
@@ -147,25 +115,11 @@ def main():
         print(f"Error: Could not find HTML file: {html_file}")
         return
 
-    # Process command-line arguments
-    if len(sys.argv) > 1 and sys.argv[1] == "--pdfkit-only":
-        convert_with_pdfkit(html_file, pdfkit_output)
-    elif len(sys.argv) > 1 and sys.argv[1] == "--weasyprint-only":
-        convert_with_weasyprint(html_file, weasyprint_output, css_file)
-    else:
-        # Generate both by default
-        convert_with_weasyprint(html_file, weasyprint_output, css_file)
-        try:
-            convert_with_pdfkit(html_file, pdfkit_output)
-        except Exception as e:
-            print(f"⚠️ Error with pdfkit: {e}")
-            print(
-                "If wkhtmltopdf is not installed, run: sudo apt-get install wkhtmltopdf"
-            )
+    # Convert to PDF
+    convert_with_weasyprint(html_file, output_file, css_file)
 
-    print("\nDone! Compare the outputs to see which looks better.")
-    print(f"WeasyPrint: {os.path.basename(weasyprint_output)}")
-    print(f"pdfkit:     {os.path.basename(pdfkit_output)}")
+    print("\n✅ PDF conversion complete!")
+    print(f"Output: {os.path.basename(output_file)}")
 
 
 if __name__ == "__main__":
