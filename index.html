@@ -588,19 +588,21 @@
             100% { transform: scale(1.05); }
         }
 
-        /* Hide main content initially */
+        /* Main content visibility - Password protection disabled */
         .main-content {
-            opacity: 0;
+            opacity: 1; /* Show by default since password protection is disabled */
             transition: opacity 0.5s ease 0.3s;
         }
 
+        /* Keep this class for future use if password protection is enabled again */
         .main-content.visible {
             opacity: 1;
         }
     </style>
 </head>
 <body>
-    <!-- Password Protection Overlay -->
+    <!-- Password Protection Overlay - Currently Disabled -->
+    <!--
     <div class="password-overlay" id="passwordOverlay">
         <div class="password-container">
             <div class="lock-icon">🔒</div>
@@ -623,6 +625,7 @@
             </form>
         </div>
     </div>
+    -->
 
     <!-- Main Content -->
     <div class="main-content" id="mainContent">
@@ -677,7 +680,8 @@
     </div> <!-- Close main-content -->
 
     <script>
-        // Password Protection Script
+        // Password Protection Script - Currently Disabled
+        /*
         class PasswordProtection {
             constructor() {
                 this.correctPassword = 'togay2025'; // Change this to your desired password
@@ -780,6 +784,12 @@
         window.addEventListener('beforeunload', () => {
             // Uncomment the line below if you want users to re-enter password every time they visit
             // sessionStorage.removeItem('portfolio_access');
+        });
+        */
+        
+        // Make main content visible immediately since password protection is disabled
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('mainContent').classList.add('visible');
         });
     </script>
 </body>
