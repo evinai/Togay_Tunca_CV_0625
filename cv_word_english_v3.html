@@ -140,8 +140,9 @@
         }
         .company-indented {
             margin-left: 20px;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             font-style: italic;
+            color: #666666;
         }
         .tutorial-link {
             color: #0066CC;
@@ -168,6 +169,27 @@
         /* Handle nested lists */
         li ul {
             margin-top: 3px;
+        }
+        /* Enhanced indentation for job achievements */
+        .job-section ul {
+            margin-left: 15px;
+        }
+        .job-section ul li {
+            margin-left: 25px;
+        }
+        /* Project listings formatting */
+        .project-code {
+            font-family: monospace;
+            background-color: #f8f9fa;
+            padding: 1px 4px;
+            border-radius: 3px;
+            color: #0066CC;
+            font-weight: 500;
+        }
+        .location-info {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9em;
         }
         
         /* Web-specific styling for better browser viewing */
@@ -257,40 +279,38 @@
 
     <div class="job-section">
         <div class="job-title-line">- Independent Consultant - Generative AI Development | June 2023 - Present</div>
-        <div class="company-indented">Self-Employed</div>
+        <div class="company-indented">Self-Employed <span class="location-info">| Remote</span></div>
         <ul>
             <li>Developing AI-powered surveillance and security analytics solutions</li>
             <li>Created 20+ specialized APIs including casino surveillance operations and analytics platforms</li>
             <li>Specialized in integrating Large Language Models with traditional business processes for enhanced efficiency and optimization</li>
-
-            <li><strong>Ongoing Focused Projects: Under Development</strong>
-                <ul>
-                    <li><code>ai_fast_ml_course_assistant_1124</code>: AI Enhanced Course-Student Analytics Assistant </li>
-                    <li><code>ai_graph_swarm_0125</code>: Graph Based Tool-Assistant System</li>
-                    <li><code>ai_fast_personal_assistant_0525</code>: AI Multi Dimensional Enhanced Personal Assistant</li>
-                    <li><code>ai_casino_analytics_1024</code>:AI Enhanced Analytics API</li>
-                    <li><code>ai_medical_diagnosis_assistant_0525</code>:AI Enhanced Medical Diagnosis Assistant</li>
-                    <li><code>ai_profile_knowledge_creator_0125_E002</code>: AI knowledge and profile generator</li>
-                </ul>
-            </li>
-            <br>
-            <li><strong>Published Tutorials & Educational Content: Some tutorials are under active development</strong>
-                <ul>
-                    <li><a href="https://evinai.github.io/Tutorial-Python-0626/" class="tutorial-link">Python Learning for All Ages</a> - Comprehensive Python programming tutorial</li>
-                    <li><a href="https://evinai.github.io/Tutorials_All_0626/" class="tutorial-link">AI Programming Tutorial-Technical Hub-Fundamentals</a> - Introduction to AI programming concepts</li>
-                    <li><a href="https://evinai.github.io/RAG_SYSTEMS_Tutorial_0625/" class="tutorial-link">RAG Systems Tutorial</a> - Advanced RAG implementation guide</li>
-                    <li><a href="https://evinai.github.io/JINJA_FASTAPI_Tutorial_0626/" class="tutorial-link">Jinja FastAPI Tutorial</a> - Web development with FastAPI and Jinja templates</li>
-                    <li><a href="https://evinai.github.io/ai_costomer_service_E009/" class="tutorial-link">AI Customer Service System</a> - AI-powered customer support implementation</li>
-                    <li><a href="https://evinai.github.io/ai_fast_graph_restaurant_0525/" class="tutorial-link">AI Graph Restaurant System</a> - Restaurant management with AI analytics</li>
-                    <li><a href="https://evinai.github.io/tutorials_2025/tr/" class="tutorial-link">AI Mastery Guide</a> - Comprehensive guide to mastering AI technologies for all levels</li>
-                </ul>
-            </li>
+        </ul>
+        
+        <div class="subsection-title" style="margin-left: 20px; font-size: 11pt; margin-top: 10px; margin-bottom: 5px;">Ongoing Focused Projects <span style="font-weight: normal; font-style: italic; font-size: 0.9em;">(Under Development)</span></div>
+        <ul>
+            <li><span class="project-code">ai_fast_ml_course_assistant_1124</span>: AI Enhanced Course-Student Analytics Assistant</li>
+            <li><span class="project-code">ai_graph_swarm_0125</span>: Graph Based Tool-Assistant System</li>
+            <li><span class="project-code">ai_fast_personal_assistant_0525</span>: AI Multi Dimensional Enhanced Personal Assistant</li>
+            <li><span class="project-code">ai_casino_analytics_1024</span>: AI Enhanced Analytics API</li>
+            <li><span class="project-code">ai_medical_diagnosis_assistant_0525</span>: AI Enhanced Medical Diagnosis Assistant</li>
+            <li><span class="project-code">ai_profile_knowledge_creator_0125_E002</span>: AI Knowledge and Profile Generator</li>
+        </ul>
+        
+        <div class="subsection-title" style="margin-left: 20px; font-size: 11pt; margin-top: 12px; margin-bottom: 5px;">Published Tutorials & Educational Content <span style="font-weight: normal; font-style: italic; font-size: 0.9em;">(Active Development)</span></div>
+        <ul>
+            <li><a href="https://evinai.github.io/Tutorial-Python-0626/" class="tutorial-link">Python Learning for All Ages</a> - Comprehensive Python programming tutorial</li>
+            <li><a href="https://evinai.github.io/Tutorials_All_0626/" class="tutorial-link">AI Programming Tutorial</a> - Introduction to AI programming concepts</li>
+            <li><a href="https://evinai.github.io/RAG_SYSTEMS_Tutorial_0625/" class="tutorial-link">RAG Systems Tutorial</a> - Advanced RAG implementation guide</li>
+            <li><a href="https://evinai.github.io/JINJA_FASTAPI_Tutorial_0626/" class="tutorial-link">Jinja FastAPI Tutorial</a> - Web development with FastAPI and Jinja templates</li>
+            <li><a href="https://evinai.github.io/ai_costomer_service_E009/" class="tutorial-link">AI Customer Service System</a> - AI-powered customer support implementation</li>
+            <li><a href="https://evinai.github.io/ai_fast_graph_restaurant_0525/" class="tutorial-link">AI Graph Restaurant System</a> - Restaurant management with AI analytics</li>
+            <li><a href="https://evinai.github.io/tutorials_2025/tr/" class="tutorial-link">AI Mastery Guide</a> - Comprehensive guide to mastering AI technologies for all levels</li>
         </ul>
     </div>
 
     <div class="job-section">
         <div class="job-title-line">- Surveillance Manager | Feb - June 2023</div>
-        <div class="company-indented">Nima Group / Club Royal Caribbean | Trinidad Tobago </div>
+        <div class="company-indented">Nima Group / Club Royal Caribbean <span class="location-info">| Trinidad Tobago</span></div>
         <ul>
             <li>Enhanced gaming surveillance systems improving <strong>gaming incident detection capability by 70%</strong></li>
             <li>Delivered comprehensive on-the-job training for surveillance staff on advanced monitoring techniques</li>
@@ -303,7 +323,7 @@
 
     <div class="job-section">
         <div class="job-title-line">- Independent Consultant - AI Training | Jan 2018 - Feb 2023</div>
-        <div class="company-indented">Self-Employed</div>
+        <div class="company-indented">Self-Employed <span class="location-info">| Remote</span></div>
         <ul>
             <li>Strategically shifted focus to self-development and advanced training in Generative AI during the global pandemic</li>
             <li><strong>Completed 40+ specialized courses</strong> in AI, machine learning, and emerging technologies</li>
@@ -314,7 +334,7 @@
     
     <div class="job-section">
         <div class="job-title-line">- Administrative Manager / Site Security Manager | Jun 2017 - Jan 2018</div>
-        <div class="company-indented">Zafer Construction Co. / Framaco Philippines Inc.| Phillipines</div>
+        <div class="company-indented">Zafer Construction Co. / Framaco Philippines Inc. <span class="location-info">| Philippines</span></div>
         <ul>
             <li>Led pre-launch mobilization phase including administrative coordination, personnel and vendor vetting, and strategic staff selection</li>
             <li><strong>Managed recruitment and vetting process for 900+ skilled workers</strong>, delivering 100% staffing requirements for related project phases</li>
