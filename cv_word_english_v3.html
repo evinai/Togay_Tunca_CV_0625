@@ -74,7 +74,7 @@
             font-weight: bold;
             color: #333333;
             margin-top: 15px;
-            margin-bottom: 8px;
+            margin-bottom: 3px;
         }
         .job-title {
             font-weight: bold;
@@ -140,7 +140,7 @@
         }
         .company-indented {
             margin-left: 20px;
-            margin-bottom: 8px;
+            margin-bottom: 3px;
             font-style: italic;
             color: #666666;
         }
@@ -153,7 +153,7 @@
             text-decoration: underline;
         }
         ul {
-            margin-top: 1px; /* Reduced from 5px to 1px to bring lists closer to job headers */
+            margin-top: 0px; /* Removed gap between headers and lists */
             margin-bottom: 5px;
             padding-left: 0px;
             list-style-type: none; /* Remove default bullets */
@@ -170,11 +170,12 @@
         li ul {
             margin-top: 3px;
         }
-        /* Enhanced indentation for job achievements */
-        .job-section ul {
+        /* Enhanced indentation for job achievements and other sections */
+        .job-section ul, div + ul, .subsection-title + ul {
             margin-left: 15px;
+            margin-top: 0px;
         }
-        .job-section ul li {
+        .job-section ul li, div + ul li, .subsection-title + ul li {
             margin-left: 25px;
         }
         /* Project listings formatting */
@@ -189,6 +190,33 @@
         .location-info {
             font-style: italic;
             color: #666;
+            font-size: 0.9em;
+        }
+        /* Enhanced indentation for projects/achievements sections */
+        .achievements-section {
+            margin-left: 10px;
+        }
+        .achievements-section ul {
+            margin-top: 0px;
+            margin-left: 10px;
+        }
+        .achievements-section ul li {
+            margin-left: 30px;
+        }
+        .project-section {
+            margin-left: 20px;
+            margin-top: 12px;
+            margin-bottom: 0px;
+        }
+        .project-title {
+            font-weight: bold;
+            color: #333333;
+            font-size: 11pt;
+            margin-bottom: 3px;
+        }
+        .project-note {
+            font-weight: normal; 
+            font-style: italic; 
             font-size: 0.9em;
         }
         
@@ -286,26 +314,30 @@
             <li>Specialized in integrating Large Language Models with traditional business processes for enhanced efficiency and optimization</li>
         </ul>
         
-        <div class="subsection-title" style="margin-left: 20px; font-size: 11pt; margin-top: 10px; margin-bottom: 5px;">Ongoing Focused Projects <span style="font-weight: normal; font-style: italic; font-size: 0.9em;">(Under Development)</span></div>
-        <ul>
-            <li><span class="project-code">ai_fast_ml_course_assistant_1124</span>: AI Enhanced Course-Student Analytics Assistant</li>
-            <li><span class="project-code">ai_graph_swarm_0125</span>: Graph Based Tool-Assistant System</li>
-            <li><span class="project-code">ai_fast_personal_assistant_0525</span>: AI Multi Dimensional Enhanced Personal Assistant</li>
-            <li><span class="project-code">ai_casino_analytics_1024</span>: AI Enhanced Analytics API</li>
-            <li><span class="project-code">ai_medical_diagnosis_assistant_0525</span>: AI Enhanced Medical Diagnosis Assistant</li>
-            <li><span class="project-code">ai_profile_knowledge_creator_0125_E002</span>: AI Knowledge and Profile Generator</li>
-        </ul>
+        <div class="project-section">
+            <div class="project-title">Ongoing Focused Projects <span class="project-note">(Under Development)</span></div>
+            <ul>
+                <li><span class="project-code">ai_fast_ml_course_assistant_1124</span>: AI Enhanced Course-Student Analytics Assistant</li>
+                <li><span class="project-code">ai_graph_swarm_0125</span>: Graph Based Tool-Assistant System</li>
+                <li><span class="project-code">ai_fast_personal_assistant_0525</span>: AI Multi Dimensional Enhanced Personal Assistant</li>
+                <li><span class="project-code">ai_casino_analytics_1024</span>: AI Enhanced Analytics API</li>
+                <li><span class="project-code">ai_medical_diagnosis_assistant_0525</span>: AI Enhanced Medical Diagnosis Assistant</li>
+                <li><span class="project-code">ai_profile_knowledge_creator_0125_E002</span>: AI Knowledge and Profile Generator</li>
+            </ul>
+        </div>
         
-        <div class="subsection-title" style="margin-left: 20px; font-size: 11pt; margin-top: 12px; margin-bottom: 5px;">Published Tutorials & Educational Content <span style="font-weight: normal; font-style: italic; font-size: 0.9em;">(Active Development)</span></div>
-        <ul>
-            <li><a href="https://evinai.github.io/Tutorial-Python-0626/" class="tutorial-link">Python Learning for All Ages</a> - Comprehensive Python programming tutorial</li>
-            <li><a href="https://evinai.github.io/Tutorials_All_0626/" class="tutorial-link">AI Programming Tutorial</a> - Introduction to AI programming concepts</li>
-            <li><a href="https://evinai.github.io/RAG_SYSTEMS_Tutorial_0625/" class="tutorial-link">RAG Systems Tutorial</a> - Advanced RAG implementation guide</li>
-            <li><a href="https://evinai.github.io/JINJA_FASTAPI_Tutorial_0626/" class="tutorial-link">Jinja FastAPI Tutorial</a> - Web development with FastAPI and Jinja templates</li>
-            <li><a href="https://evinai.github.io/ai_costomer_service_E009/" class="tutorial-link">AI Customer Service System</a> - AI-powered customer support implementation</li>
-            <li><a href="https://evinai.github.io/ai_fast_graph_restaurant_0525/" class="tutorial-link">AI Graph Restaurant System</a> - Restaurant management with AI analytics</li>
-            <li><a href="https://evinai.github.io/tutorials_2025/tr/" class="tutorial-link">AI Mastery Guide</a> - Comprehensive guide to mastering AI technologies for all levels</li>
-        </ul>
+        <div class="project-section">
+            <div class="project-title">Published Tutorials & Educational Content <span class="project-note">(Active Development)</span></div>
+            <ul>
+                <li><a href="https://evinai.github.io/Tutorial-Python-0626/" class="tutorial-link">Python Learning for All Ages</a> - Comprehensive Python programming tutorial</li>
+                <li><a href="https://evinai.github.io/Tutorials_All_0626/" class="tutorial-link">AI Programming Tutorial</a> - Introduction to AI programming concepts</li>
+                <li><a href="https://evinai.github.io/RAG_SYSTEMS_Tutorial_0625/" class="tutorial-link">RAG Systems Tutorial</a> - Advanced RAG implementation guide</li>
+                <li><a href="https://evinai.github.io/JINJA_FASTAPI_Tutorial_0626/" class="tutorial-link">Jinja FastAPI Tutorial</a> - Web development with FastAPI and Jinja templates</li>
+                <li><a href="https://evinai.github.io/ai_costomer_service_E009/" class="tutorial-link">AI Customer Service System</a> - AI-powered customer support implementation</li>
+                <li><a href="https://evinai.github.io/ai_fast_graph_restaurant_0525/" class="tutorial-link">AI Graph Restaurant System</a> - Restaurant management with AI analytics</li>
+                <li><a href="https://evinai.github.io/tutorials_2025/tr/" class="tutorial-link">AI Mastery Guide</a> - Comprehensive guide to mastering AI technologies for all levels</li>
+            </ul>
+        </div>
     </div>
 
     <div class="job-section">
@@ -344,7 +376,7 @@
 
     <div class="job-section">
         <div class="job-title-line">- Security Consultant - Analyst | Nov 2015 - May 2017</div>
-        <div class="company-indented">ISCD Security Consultancy</div>
+        <div class="company-indented">ISCD Security Consultancy <span class="location-info">| Istanbul, Türkiye</span></div>
         <ul>
             <li>Conducted comprehensive security risk assessments for high-profile corporate clients</li>
             <li>Developed <strong>enhanced risk assessment models improving threat and risk detection capability</strong></li>
@@ -355,7 +387,7 @@
 
     <div class="job-section">
         <div class="job-title-line">- Independent Consultant - Market Analysis | Oct - Dec 2016</div>
-        <div class="company-indented">Zafer Construction Co., | Phillipines</div>
+        <div class="company-indented">Zafer Construction Co. <span class="location-info">| Philippines</span></div>
         <ul>
             <li>Conducted comprehensive in-depth market analysis for Philippines pre-project phase</li>
             <li>Gathered and assessed comprehensive market data and competitive intelligence</li>
@@ -367,7 +399,7 @@
 
     <div class="job-section">
         <div class="job-title-line">- Site Security Manager | Nov 2012 - Feb 2015</div>
-        <div class="company-indented">Zafer Construction Co., | Sana'a, Yemen</div>
+        <div class="company-indented">Zafer Construction Co. <span class="location-info">| Sana'a, Yemen</span></div>
         <ul>
             <li>In addition to all responsibilities performed between November 2010 and January 2012, the following additional responsibilities were undertaken</li>
             <li>U.S. Embassy Project - Coordinated security operations across two high-risk construction sites</li>
@@ -377,7 +409,7 @@
 
     <div class="job-section">
         <div class="job-title-line">- Surveillance Manager | Jul - Nov 2012</div>
-        <div class="company-indented">Pasha Group / Casino Pegasus | Bulgaria</div>
+        <div class="company-indented">Pasha Group / Casino Pegasus <span class="location-info">| Bulgaria</span></div>
         <ul>
             <li>Designed and implemented comprehensive CCTV surveillance setup</li>
             <li>Established surveillance operations protocols and staff training programs</li>
@@ -387,7 +419,7 @@
 
     <div class="job-section">
         <div class="job-title-line">- Site Security Manager | Nov 2010 - Jan 2012</div>
-        <div class="company-indented">Zafer Construction Co.| Yemen</div>
+        <div class="company-indented">Zafer Construction Co. <span class="location-info">| Sana'a, Yemen</span></div>
         <ul>
             <li>U.S. Embassy Housing Project-Managed security operations for contractor company <strong>in a high-risk environment</strong></li>
             <li>Oversaw orientation and security awareness training of all contractor personnel</li>
@@ -402,7 +434,7 @@
 
     <div class="job-section">
         <div class="job-title-line">- Surveillance Manager | Jul - Nov 2010</div>
-        <div class="company-indented">Princess Casinos | Guatemala</div>
+        <div class="company-indented">Princess Casinos <span class="location-info">| Guatemala</span></div>
         <ul>
             <li>Assisted in designing and implementing Casino Surveillance Systems Setup</li>
             <li>Contributed to operational surveillance protocols and procedures</li>
@@ -413,7 +445,7 @@
 
     <div class="job-section">
         <div class="job-title-line">- Operations Manager / Area Manager | Apr 2006 - Feb 2010</div>
-        <div class="company-indented">Pronet Security and Consultancy</div>
+        <div class="company-indented">Pronet Security and Consultancy <span class="location-info">| Istanbul, Türkiye</span></div>
         <ul>
             <li><strong>Re-engineered operational workflow supporting 400% workforce expansion</strong> within a two-year period</li>
             <li><strong>Optimized critical processes across Operations, HR, Training, Reporting, and Auditing departments</strong></li>
@@ -442,8 +474,7 @@
             <li>Oversaw operational performance metrics and delivered strategic reporting to the General Manager</li>
         </ul>
     </div>
-    <br>
-    <br>
+  
     <div class="job-section">
         <div class="job-title-line">- Consultant | Nov 2004 - Mar 2005</div>
         <div class="company-indented">Pronet Security and Consultancy</div>
@@ -521,42 +552,49 @@
 
     <div class="section-title">NOTABLE PROJECTS & ACHIEVEMENTS</div>
 
-    <div class="subsection-title">International Projects & Major Clients</div>
-    <ul>
-        <li><strong>Casino Operations:</strong> Emperyal, Blindo, Pegasus, Royal Caribbean, Guatemala Princess, Star Cruises - comprehensive surveillance management and strategic surveillance system design & implementation</li>
-        <li><strong>Hospitality Properties:</strong> Marti Resort Hotel, Marti Myra Hotel, Kempinski Hotel Residence - security management and strategic consultancy</li>
-        <li><strong>Embassy Projects:</strong> Yemen, Philippines - administrative coordination and security management including emergency protocols and crisis management</li>
-        <li><strong>Major Shopping Centers:</strong> Istinye Park, Akmerkez, Astoria Mall, Gordion Mall - comprehensive security system design and implementation</li>
-        <li><strong>Corporate Clients:</strong> Koç Holding, Doğuş Group, Turkcell, TOBB - strategic security consultancy and risk assessment</li>
-    </ul>
+    <div class="achievements-section">
+        <div class="subsection-title">International Projects & Major Clients</div>
+        <ul>
+            <li><strong>Casino Operations:</strong> Emperyal, Blindo, Pegasus, Royal Caribbean, Guatemala Princess, Star Cruises - comprehensive surveillance management and strategic surveillance system design & implementation</li>
+            <li><strong>Hospitality Properties:</strong> Marti Resort Hotel, Marti Myra Hotel, Kempinski Hotel Residence - security management and strategic consultancy</li>
+            <li><strong>Embassy Projects:</strong> Yemen, Philippines - administrative coordination and security management including emergency protocols and crisis management</li>
+            <li><strong>Major Shopping Centers:</strong> Istinye Park, Akmerkez, Astoria Mall, Gordion Mall - comprehensive security system design and implementation</li>
+            <li><strong>Corporate Clients:</strong> Koç Holding, Doğuş Group, Turkcell, TOBB - strategic security consultancy and risk assessment</li>
+        </ul>
+    </div>
 
-    <div class="subsection-title">Software Development & AI Projects</div>
-    <ul>
-        <li><strong>AI-Powered Business Analytics:</strong> Advanced predictive modeling and data-driven decision-making systems</li>
-        <li><strong>Customer Behavior Analysis:</strong> Sophisticated segmentation and retention prediction systems</li>
-        <li><strong>AI-Integrated Surveillance Operations API:</strong> LLM-integrated data analysis and intelligent monitoring systems</li>
-        <li><strong>PDF Knowledge Systems:</strong> Local LLM RAG implementation for advanced document analysis and information extraction</li>
-        <li><strong>Educational Content Platform:</strong> Comprehensive tutorials covering Python, AI, and API Development with hands-on implementation</li>
-    </ul>
+    <div class="achievements-section">
+        <div class="subsection-title">Software Development & AI Projects</div>
+        <ul>
+            <li><strong>AI-Powered Business Analytics:</strong> Advanced predictive modeling and data-driven decision-making systems</li>
+            <li><strong>Customer Behavior Analysis:</strong> Sophisticated segmentation and retention prediction systems</li>
+            <li><strong>AI-Integrated Surveillance Operations API:</strong> LLM-integrated data analysis and intelligent monitoring systems</li>
+            <li><strong>PDF Knowledge Systems:</strong> Local LLM RAG implementation for advanced document analysis and information extraction</li>
+            <li><strong>Educational Content Platform:</strong> Comprehensive tutorials covering Python, AI, and API Development with hands-on implementation</li>
+        </ul>
+    </div>
 
     <div class="section-title">EDUCATION & CERTIFICATIONS</div>
 
-    <div class="subsection-title">Academic Background</div>
-    <ul>
-        <li><strong>Associate Degree</strong> - Tourism and Hotel Management | University of Muğla, Turkey (2009)
-            <br>GPA: 3.04/4.0, Academic Honors both semesters (First Semester: Ranked top of department with Honors)</li>
-        <li><strong>Computer Programming</strong> - Anadolu University, Eskişehir, Turkey (Not completed)
-            <br>Transitioned to specialized opensource and paid coursework and hands-on projects for more practical, industry-aligned expertise</li>
-        <li><strong>High School Diploma</strong> - Tourism & Hotel Management | Altunizade Tourism School, Istanbul (1993)</li>
-    </ul>
+    <div class="achievements-section">
+        <div class="subsection-title">Academic Background</div>
+        <ul>
+            <li><strong>Associate Degree</strong> - Tourism and Hotel Management | University of Muğla, Turkey (2009)
+                <br>GPA: 3.04/4.0, Academic Honors both semesters (First Semester: Ranked top of department with Honors)</li>
+            <li><strong>Computer Programming</strong> - Anadolu University, Eskişehir, Turkey (Not completed)
+                <br>Transitioned to specialized opensource and paid coursework and hands-on projects for more practical, industry-aligned expertise</li>
+            <li><strong>High School Diploma</strong> - Tourism & Hotel Management | Altunizade Tourism School, Istanbul (1993)</li>
+        </ul>
+    </div>
 
-    <div class="subsection-title">Professional Certifications</div>
-    <p style="font-style: italic; color: #666; font-size: 9pt; margin-bottom: 15px;">
-        <em>Note: For specializations, only the total number of courses completed is indicated. Detailed course listings and certificates are available upon request.</em>
-    </p>
+    <div class="achievements-section">
+        <div class="subsection-title">Professional Certifications</div>
+        <p style="font-style: italic; color: #666; font-size: 9pt; margin-bottom: 15px; margin-left: 15px;">
+            <em>Note: For specializations, only the total number of courses completed is indicated. Detailed course listings and certificates are available upon request.</em>
+        </p>
 
-    <div class="skill-category">
-        <div class="skill-header">AI & Machine Learning (40+ Specialized Courses)</div>
+        <div class="skill-category" style="margin-left: 15px;">
+            <div class="skill-header">AI & Machine Learning (40+ Specialized Courses)</div>
         <ul>
             <li><strong>DeepLearning.AI (16 courses):</strong>
                 ChatGPT Prompt Engineering for Developers,
@@ -586,7 +624,7 @@
         </ul>
     </div>
 
-    <div class="skill-category">
+    <div class="skill-category" style="margin-left: 15px;">
         <div class="skill-header">Security & Risk Management</div>
         <ul>
             <li><strong>ASIS International:</strong> Physical Security Professional (PSP) courses (8 courses)</li>
@@ -596,7 +634,7 @@
         </ul>
     </div>
 
-    <div class="skill-category">
+    <div class="skill-category" style="margin-left: 15px;">
         <div class="skill-header">Technical Skills Development</div>
         <ul>
             <li><strong>Cloud Platforms:</strong> AWS, GCP, Azure, IBM Cloud fundamentals and implementation</li>
@@ -607,22 +645,26 @@
         </ul>
     </div>
     <div class="section-title">LANGUAGES</div>
-    <ul>
-        <li><strong>Turkish:</strong> Native</li>
-        <li><strong>English:</strong> Advanced</li>
-        <li><strong>German:</strong> Elementary</li>
-        <li><strong>Romanian:</strong> Elementary</li>
-    </ul>
+    <div class="achievements-section">
+        <ul>
+            <li><strong>Turkish:</strong> Native</li>
+            <li><strong>English:</strong> Advanced</li>
+            <li><strong>German:</strong> Elementary</li>
+            <li><strong>Romanian:</strong> Elementary</li>
+        </ul>
+    </div>
 
     <div class="section-title">ADDITIONAL INFORMATION</div>
-    <ul>
-        <li><strong>Date of Birth:</strong> January 18, 1973</li>
-        <li><strong>Military Service:</strong> Completed (Turkish Armed Forces)</li>
-        <li><strong>Nationality:</strong> Turkish Republic</li>
-        <li><strong>Marital Status:</strong> Single</li>
-        <li><strong>Availability:</strong> Open to international assignments and remote work opportunities</li>
-        <li><strong>Personal Interests:</strong> Continuous learning, technology innovation, Mediterranean culture, swimming, cat enthusiast</li>
-    </ul>
+    <div class="achievements-section">
+        <ul>
+            <li><strong>Date of Birth:</strong> January 18, 1973</li>
+            <li><strong>Military Service:</strong> Completed (Turkish Armed Forces)</li>
+            <li><strong>Nationality:</strong> Turkish Republic</li>
+            <li><strong>Marital Status:</strong> Single</li>
+            <li><strong>Availability:</strong> Open to international assignments and remote work opportunities</li>
+            <li><strong>Personal Interests:</strong> Continuous learning, technology innovation, Mediterranean culture, swimming, cat enthusiast</li>
+        </ul>
+    </div>
 
     <hr style="margin-top: 30px; border: none; border-top: 1px solid #ccc;">
     <p style="text-align: center; font-style: italic; color: #666; font-size: 10pt;">References and detailed project portfolios available upon request</p>
