@@ -79,8 +79,8 @@ def main():
     if not check_requirements():
         return
 
-    # Paths
-    base_dir = "/home/evinai/Desktop/Togay_Tunca_CV_0625"
+    # Paths - use the directory where this script is located
+    base_dir = os.path.dirname(os.path.abspath(__file__))
 
     # Check for Turkish version argument or specific file
     if len(sys.argv) > 1:
